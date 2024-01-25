@@ -1,0 +1,105 @@
+@import"../../app.scss";
+
+.hero{
+    height: calc(100vh - 100px);
+    background: linear-gradient(180deg,#0c0c1d,#111132);
+    overflow: hidden;
+    position: relative;
+    
+    .wrapper{
+        max-width: 1266px;
+        height: 100%;
+        margin:auto;
+        margin-left: 2rem;
+    }
+    .textcontainer{
+        height: 100%;
+        width: 50%; 
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        gap: 40px;
+
+        @include mobile{
+            height: 50%;
+            width: 100%;
+            gap: 20px;
+            align-items: center ;
+            text-align: center;
+        }
+        img{
+            @include mobile{
+                align-self: flex-start;
+                position: relative;
+                left: 1.8rem;
+                top: 1rem;
+            }
+        }
+
+
+    }
+    .scroll-img{
+        width: 40px;
+    }
+    h2{
+        font-size: 30px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+
+    }
+    h1{
+        font-size: 68px;
+        @include mobile{
+           font-size: 36px;
+        }
+    }
+    .imageContainer{
+        height: 95%;
+        position: absolute;
+        top: 0;
+        right: 50px;
+        width: 600px;
+        bottom: 20px;
+
+        @include mobile{
+            height: 40%;
+            width: 100%;
+            top: unset;
+            bottom: 0;
+            left: 0.8rem;
+            display: flex;
+            align-items: center;
+            
+        }
+    
+        
+    }
+    .hero-img{
+        width: 100%;
+    }
+
+    .buttons{
+        button{
+            padding: 20px;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: transparent;
+            color: white;
+            margin-right: 20px;
+            cursor: pointer;
+            font-weight: 300;
+        }
+    }
+    
+    .slidingTextContainer{
+        position: absolute;
+        font-size: 45vh;
+        bottom: -60px;
+        white-space: nowrap;
+        color: #ffffff09;
+        width: 50%;
+        font-weight: bold;
+
+    }
+}
